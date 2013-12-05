@@ -17,7 +17,7 @@ You should define this variables before execute
 Usage
 =====
  
-   If you want to get an e-mail from this script everyday example at 8:00 a.m edit your crontab line
+   If you want to get an e-mail from this script everyday example at 8:00 a.m edit your crontab file with this line
    
 
 ```python
