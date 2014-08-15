@@ -39,12 +39,13 @@ def send_email(message_to_be_send):
     mail.login(SMTP_USERNAME, SMTP_PASSWORD)
     mail.sendmail(EMAIL_FROM, EMAIL_TO, msg.as_string())
     mail.quit()
-url_ceyrek = "http://api.piyasa.com/json/?kaynak=metal_arsiv_ay_alti_CYR" #API for ceyrek
-url_gram = "http://api.piyasa.com/json/?kaynak=metal_arsiv_ay_alti_GRM" #API for gram
-message = "---Ceyrek altin fiyatlari--- \n\n %s\n" % get_data(url_ceyrek,
+
+def main():
+    url_ceyrek = "http://api.piyasa.com/json/?kaynak=metal_arsiv_ay_alti_CYR" #API for ceyrek
+    url_gram = "http://api.piyasa.com/json/?kaynak=metal_arsiv_ay_alti_GRM" #API for gram
+    message = "---Ceyrek altin fiyatlari--- \n\n %s\n" % get_data(url_ceyrek,
                                                     "ceyrek altin fiyati")
 
-message += "---Gram altin fiyatlari--- \n\n %s\n" % get_data(url_gram,
+    message += "---Gram altin fiyatlari--- \n\n %s\n" % get_data(url_gram,
                                                     "gram altin fiyati")
-
-send_email(message)
+    send_email(message)
