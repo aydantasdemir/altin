@@ -2,16 +2,24 @@ import urllib2
 import json
 import datetime
 import smtplib
+import os.path
+import ConfigParser
 from email.mime.text import MIMEText
+
+config= ConfigParser.ConfigParser()
+config.read(os.path.expanduser('~/.altin.conf'))
 
 SMTP_SERVER = "smtp.gmail.com" #SMTP server for gmail
 SMTP_PORT = 587 #SMTP port for gmail
-SMTP_USERNAME = "*****"
-SMTP_PASSWORD = "*****"
-EMAIL_TO = "******"
+SMTP_USERNAME = config.get('UserInfo','SMTP_USERNAME')
+SMTP_PASSWORD = config.get('UserInfo','SMTP_PASSWORD')
+EMAIL_TO = config.get('UserInfo','EMAIL_TO')
 EMAIL_FROM = "bilgi@altinfiyat.com" #You may change this mail address
 EMAIL_SUBJECT = "Gold price notifier" #You may change this subject
 
+config_file=os.path.expanduser("~/.altin.conf")
+configs=os.open("config_file","r")
+configs.readline()
 
 def get_data(url, desc):
     """Get data from api, parse it and return as message"""
