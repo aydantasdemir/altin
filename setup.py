@@ -20,7 +20,7 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'altin = altin:main',
+            'altin = altin.altin:main',
         ],
     },
 )
