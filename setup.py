@@ -3,7 +3,7 @@ from setuptools import setup
 setup(
     name = 'altin',
     packages = ['altin'],
-    version = '0.0.2',
+    version = '0.0.4',
     description = 'Check last 30 days gold prices with email',
     author='Aydan Tasdemir',
     author_email='aydantasdemir@gmail.com',
@@ -20,7 +20,7 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'altin = altin:main',
+            'altin = altin.altin:main',
         ],
     },
 )
