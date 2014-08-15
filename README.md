@@ -6,12 +6,16 @@ Monthly gold price notifier
 Get Started
 ===========
 
-You should define this variables before execute
+You should define .altin.conf file in your home directory in this format
 
-```python
- SMTP_USERNAME = "Must be a gmail account"
- SMTP_PASSWORD = "Password for gmail account which is reference in SMTP_USERNAME"
- EMAIL_TO = "Mail address to send gold prices"
+```
+$ vi ~/.altin.conf
+
+[UserInfo]
+SMTP_USERNAME=yourmailusername
+SMTP_PASSWORD=yourmailpassword
+EMAIL_TO=mail@mail.com
+
 ```
  
 Usage
