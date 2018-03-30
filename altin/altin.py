@@ -46,7 +46,6 @@ def send_email(message):
 
     msg = MIMEText(message)
     msg['Subject'] = "Gold price notifier"
-    msg['Subject'] = "Gold price notifier"
     msg['To'] = config.get('UserInfo','EMAIL_TO')
     msg['From'] = "bilgi@altinfiyat.com"
 
